@@ -15,6 +15,7 @@ compil:
 	cd src; javac rental/Client.java -d ../classes;
 	cd src; javac rental/criterion/BrandCriterion.java -d ../classes
 	cd src; javac rental/criterion/PriceCriterion.java -d ../classes
+	cd src; javac rental/criterion/InterCriterion.java -d ../classes
 
 
 # Tests
@@ -42,3 +43,7 @@ BrandCriterionTest:
 PriceCriterionTest:
 	javac -classpath test-1.7.jar test/rental/criterion/PriceCriterionTest.java
 	java -jar test-1.7.jar rental.criterion.PriceCriterionTest
+
+InterCriterionTest:
+	javac -classpath test-1.7.jar test/rental/criterion/InterCriterionTest.java
+	java -jar test-1.7.jar rental.criterion.InterCriterionTest
