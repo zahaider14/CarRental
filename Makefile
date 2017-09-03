@@ -5,10 +5,6 @@ clean:
 	cd test; find . -name "*.class" -type f -delete;
 
 
-
-
-
-
 # Compilation
 
 compil:
@@ -18,6 +14,7 @@ compil:
 	cd src; javac rental/vehicles/Motorbike.java -d ../classes;
 	cd src; javac rental/Client.java -d ../classes;
 	cd src; javac rental/criterion/BrandCriterion.java -d ../classes
+	cd src; javac rental/criterion/PriceCriterion.java -d ../classes
 
 
 # Tests
@@ -41,3 +38,7 @@ ClientTest:
 BrandCriterionTest:
 	javac -classpath test-1.7.jar test/rental/criterion/BrandCriterionTest.java
 	java -jar test-1.7.jar rental.criterion.BrandCriterionTest
+
+PriceCriterionTest:
+	javac -classpath test-1.7.jar test/rental/criterion/PriceCriterionTest.java
+	java -jar test-1.7.jar rental.criterion.PriceCriterionTest
