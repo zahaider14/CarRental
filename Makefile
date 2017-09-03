@@ -17,6 +17,7 @@ compil:
 	cd src; javac rental/vehicles/Car.java -d ../classes;
 	cd src; javac rental/vehicles/Motorbike.java -d ../classes;
 	cd src; javac rental/Client.java -d ../classes;
+	cd src; javac rental/criterion/BrandCriterion.java -d ../classes
 
 
 # Tests
@@ -36,3 +37,7 @@ MotorbikeTest:
 ClientTest:
 	javac -classpath test-1.7.jar test/rental/ClientTest.java
 	java -jar test-1.7.jar rental.ClientTest
+
+BrandCriterionTest:
+	javac -classpath test-1.7.jar test/rental/criterion/BrandCriterionTest.java
+	java -jar test-1.7.jar rental.criterion.BrandCriterionTest
