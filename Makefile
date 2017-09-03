@@ -15,6 +15,7 @@ compil:
 	make clean;
 	cd src; javac rental/vehicles/Vehicle.java -d ../classes;
 	cd src; javac rental/vehicles/Car.java -d ../classes;
+	cd src; javac rental/vehicles/Motorbike.java -d ../classes;
 
 
 # Tests
@@ -26,3 +27,7 @@ VehicleTest:
 CarTest:
 	javac -classpath test-1.7.jar test/rental/vehicles/CarTest.java
 	java -jar test-1.7.jar rental.vehicles.CarTest
+
+MotorbikeTest:
+	javac -classpath test-1.7.jar test/rental/vehicles/MotorbikeTest.java
+	java -jar test-1.7.jar rental.vehicles.MotorbikeTest
