@@ -34,7 +34,20 @@ public class Client {
     return this.age;
   }
 
-  
+  /**
+  * @see java.lang.Object#equals(java.lang.Object)
+  */
+  public boolean equals(Object o) {
+    if(o instanceof Client) {
+      Client other = (Client) o;
+      return other.getAge() == this.getAge() && other.getName().equals(this.getName());
+    }
+    else {
+      return false;
+    }
+  }
+
+
 
 
 }
